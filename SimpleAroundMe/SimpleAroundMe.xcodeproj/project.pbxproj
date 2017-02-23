@@ -61,10 +61,18 @@
 		5A1AABEBA80D8E1743FB54EB /* Navitia */ = {
 			isa = PBXGroup;
 			children = (
+				6559E35B1E5F87B300D9561A /* Common */,
 				5A1AA549C3ADE12BC1605812 /* Models */,
 				5A1AA749638D9AE8BF7E5F6E /* Resources */,
 			);
 			path = Navitia;
+			sourceTree = "<group>";
+		};
+		6559E35B1E5F87B300D9561A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		FE5DA1631E5F2E5E0069C71E = {
@@ -336,6 +344,7 @@
 				FE5DA1801E5F2E5E0069C71E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let cellIdentifier = "PoiCellIdentifier"
+    let cellIdentifier = "StopPointCellIdentifier"
     var stopSchedules:[StopSchedule] = []
     
     override func viewDidLoad() {
