@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "79fd566688a683408019a54689a85032"
+build_time: [541185491, 108722000]
+inputs:
+  "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/ViewController.swift": [541184149, 0]
+  "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/AppDelegate.swift": [541176670, 0]

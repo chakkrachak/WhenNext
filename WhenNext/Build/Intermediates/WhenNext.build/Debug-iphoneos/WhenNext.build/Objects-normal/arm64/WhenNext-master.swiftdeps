@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "5f1517c39a8540d36439b75baf896507"
+build_time: [540927664, 471906000]
+inputs:
+  "/Users/cchak/dev/WhenNext/WhenNext/WhenNext/ViewController.swift": [540927470, 0]
+  "/Users/cchak/dev/WhenNext/WhenNext/WhenNext/AppDelegate.swift": [540927470, 0]
