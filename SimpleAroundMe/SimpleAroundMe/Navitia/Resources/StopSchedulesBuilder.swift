@@ -9,10 +9,12 @@ class StopSchedulesBuilder {
     var coverage:String
     var token:String
     var coords:String?
+    var stopSchedules:[StopSchedule]
 
     init(token:String, coverage: String) {
         self.token = token
         self.coverage = coverage
+        self.stopSchedules = []
     }
 
     func withCoords(_ coords: String) -> StopSchedulesBuilder {
@@ -21,10 +23,11 @@ class StopSchedulesBuilder {
     }
 
     func build() -> [StopSchedule] {
-        // let url:String = "https://9e304161-bb97-4210-b13d-c71eaf58961c@api.navitia.io/v1/coverage/fr-idf/coords/2.377310%3B48.847002/stop_schedules?"
+        let url:String = "https://api.navitia.io/v1/coverage/fr-idf/coords/2.377310%3B48.847002/stop_schedules?"
         
-        let requestURL: NSURL = NSURL(string: "http://www.learnswiftonline.com/Samples/subway.json")!
+        let requestURL: NSURL = NSURL(string: url)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
+        urlRequest.addValue("9e304161-bb97-4210-b13d-c71eaf58961c", forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest as URLRequest) {
             (data, response, error) -> Void in
@@ -35,16 +38,19 @@ class StopSchedulesBuilder {
             if (statusCode == 200) {
                 do{
                     
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
-                    
-                    if let stations = json["stations"] as? [[String: AnyObject]] {
+                    let json:[String:AnyObject] = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
+
+                    if let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as? [[String: AnyObject]] {
                         
-                        for station in stations {
+                        for stopSchedule in jsonStopSchedules {
                             
-                            if let name = station["stationName"] as? String {
+                            if let stopPoint = stopSchedule["stop_point"] as? [String: AnyObject] {
                                 
-                                if let year = station["buildYear"] as? String {
-                                    print(name,year)
+                                if let name = stopPoint["name"] as? String {
+                                    self.stopSchedules.append(StopSchedule(stopPoint: StopPoint(name)))
+                                    for innerStopSchedule in self.stopSchedules {
+                                        print(name, innerStopSchedule.stopPoint.name)
+                                    }
                                 }
                                 
                             }
@@ -56,16 +62,17 @@ class StopSchedulesBuilder {
                     print("Error with Json: \(error)")
                 }
             }
+            else {
+                print(statusCode)
+            }
         }
         
         task.resume()
-        
-        return [
-            StopSchedule(stopPoint: StopPoint("Arrêt des enfers 1")),
-            StopSchedule(stopPoint: StopPoint("Arrêt des enfers 2")),
-            StopSchedule(stopPoint: StopPoint("Arrêt des enfers 3")),
-            StopSchedule(stopPoint: StopPoint("Arrêt des enfers 4")),
-            StopSchedule(stopPoint: StopPoint("Arrêt des enfers 5"))
-        ]
+
+        print("END")
+        for stopSchedule in stopSchedules {
+            print(stopSchedule.stopPoint.name)
+        }
+        return stopSchedules
     }
 }

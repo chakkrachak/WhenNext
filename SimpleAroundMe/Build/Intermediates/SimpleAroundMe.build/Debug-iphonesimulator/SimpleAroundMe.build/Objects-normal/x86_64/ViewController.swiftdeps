@@ -6,26 +6,26 @@ provides-nominal:
 provides-member:
 - ["C14SimpleAroundMe14ViewController", ""]
 provides-dynamic-lookup:
+- "viewDidLoad"
 - "cellIdentifier"
 - "tableView"
 - "tableView"
 - "numberOfSections"
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
 depends-top-level:
 - "StringLiteralType"
-- "UITableView"
-- "UITableViewDelegate"
 - "UIViewController"
-- "UITableViewCell"
 - "UITableViewDataSource"
-- !private "StopSchedulesBuilder"
+- "UITableViewDelegate"
 - "ViewController"
-- "StopSchedule"
-- "CastingPrecedence"
 - "Int"
-- "AssignmentPrecedence"
 - "IndexPath"
+- "UITableView"
+- "CastingPrecedence"
+- "StopSchedule"
+- "AssignmentPrecedence"
+- "UITableViewCell"
+- !private "StopSchedulesBuilder"
 depends-member:
 - !private ["Ps9AnyObject", "StopSchedulesBuilder"]
 - !private ["Ps9AnyObject", "build"]
@@ -1178,4 +1178,4 @@ depends-external:
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "d52862b5fdf778b5f2d70aeec1b57a47"
+interface-hash: "22902a36d9c8a6958392c534df3fc62e"

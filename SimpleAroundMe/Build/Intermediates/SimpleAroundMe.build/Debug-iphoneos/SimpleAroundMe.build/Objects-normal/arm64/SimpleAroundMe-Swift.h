@@ -144,7 +144,6 @@ SWIFT_CLASS("_TtC14SimpleAroundMe11AppDelegate")
 SWIFT_CLASS("_TtC14SimpleAroundMe14ViewController")
 @interface ViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, readonly, copy) NSString * _Nonnull cellIdentifier;
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull pois;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
