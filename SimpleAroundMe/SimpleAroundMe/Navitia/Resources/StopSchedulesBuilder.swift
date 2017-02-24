@@ -22,7 +22,7 @@ class StopSchedulesBuilder {
         return self
     }
 
-    func build() -> [StopSchedule] {
+    func build(callback: @escaping ([StopSchedule]) -> (Void)) {
         let url:String = "https://api.navitia.io/v1/coverage/fr-idf/coords/2.377310%3B48.847002/stop_schedules?"
         
         let requestURL: NSURL = NSURL(string: url)!
@@ -41,38 +41,27 @@ class StopSchedulesBuilder {
                     let json:[String:AnyObject] = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
 
                     if let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as? [[String: AnyObject]] {
-                        
                         for stopSchedule in jsonStopSchedules {
-                            
                             if let stopPoint = stopSchedule["stop_point"] as? [String: AnyObject] {
-                                
                                 if let name = stopPoint["name"] as? String {
                                     self.stopSchedules.append(StopSchedule(stopPoint: StopPoint(name)))
-                                    for innerStopSchedule in self.stopSchedules {
-                                        print(name, innerStopSchedule.stopPoint.name)
-                                    }
                                 }
-                                
                             }
                         }
-                        
                     }
                     
-                }catch {
+                } catch {
                     print("Error with Json: \(error)")
                 }
             }
             else {
                 print(statusCode)
             }
+            DispatchQueue.main.async {
+                callback(self.stopSchedules)
+            }
         }
         
         task.resume()
-
-        print("END")
-        for stopSchedule in stopSchedules {
-            print(stopSchedule.stopPoint.name)
-        }
-        return stopSchedules
     }
 }

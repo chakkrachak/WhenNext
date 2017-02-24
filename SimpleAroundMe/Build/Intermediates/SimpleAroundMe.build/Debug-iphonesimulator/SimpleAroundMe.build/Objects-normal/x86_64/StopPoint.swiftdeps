@@ -7,9 +7,9 @@ provides-member:
 - ["C14SimpleAroundMe9StopPoint", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "StopPoint"
 - "String"
 - "AssignmentPrecedence"
-- "StopPoint"
 depends-member:
 - !private ["Ps9AnyObject", "name"]
 - ["Ps9AnyObject", ""]

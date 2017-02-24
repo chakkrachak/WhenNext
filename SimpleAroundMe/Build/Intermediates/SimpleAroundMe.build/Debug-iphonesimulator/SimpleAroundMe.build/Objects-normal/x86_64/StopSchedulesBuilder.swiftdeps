@@ -7,26 +7,28 @@ provides-member:
 - ["C14SimpleAroundMe20StopSchedulesBuilder", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "print"
 - !private "NSMutableURLRequest"
-- !private "JSONSerialization"
 - !private "URLSession"
 - !private "URL"
-- "StopSchedulesBuilder"
-- "StopSchedule"
-- !private "Array"
-- !private "StopPoint"
-- !private "Void"
-- !private "URLRequest"
-- !private "NSURL"
 - "CastingPrecedence"
+- "StopSchedule"
 - "AssignmentPrecedence"
-- !private "HTTPURLResponse"
 - !private "=="
+- "String"
+- !private "DispatchQueue"
+- !private "print"
 - !private "AnyObject"
+- !private "JSONSerialization"
+- !private "NSURL"
+- !private "URLRequest"
+- "StopSchedulesBuilder"
+- !private "StopPoint"
+- "Void"
 - !private "StringLiteralType"
+- !private "HTTPURLResponse"
+- !private "Array"
 depends-member:
+- !private ["Ps9AnyObject", "DispatchQueue"]
 - !private ["Ps9AnyObject", "JSONSerialization"]
 - !private ["Ps9AnyObject", "NSMutableURLRequest"]
 - !private ["Ps9AnyObject", "NSURL"]
@@ -34,17 +36,17 @@ depends-member:
 - !private ["Ps9AnyObject", "StopSchedule"]
 - !private ["Ps9AnyObject", "URLSession"]
 - !private ["Ps9AnyObject", "addValue"]
+- !private ["Ps9AnyObject", "async"]
 - !private ["Ps9AnyObject", "coords"]
 - !private ["Ps9AnyObject", "coverage"]
 - !private ["Ps9AnyObject", "dataTask"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "jsonObject"]
-- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "resume"]
 - !private ["Ps9AnyObject", "shared"]
 - !private ["Ps9AnyObject", "statusCode"]
-- !private ["Ps9AnyObject", "stopPoint"]
 - !private ["Ps9AnyObject", "stopSchedules"]
 - !private ["Ps9AnyObject", "token"]
 - ["Ps9AnyObject", ""]
@@ -70,9 +72,11 @@ depends-member:
 - !private ["Ps7CVarArg", "_Element"]
 - !private ["Ps7CVarArg", "addValue"]
 - !private ["Ps7CVarArg", "append"]
+- !private ["Ps7CVarArg", "async"]
 - !private ["Ps7CVarArg", "dataTask"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "jsonObject"]
+- !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "resume"]
 - !private ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "statusCode"]
@@ -93,9 +97,11 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addValue"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "async"]
 - !private ["Ps28CustomDebugStringConvertible", "dataTask"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "jsonObject"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "resume"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "statusCode"]
@@ -119,9 +125,11 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addValue"]
 - !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "async"]
 - !private ["Ps23CustomStringConvertible", "dataTask"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "jsonObject"]
+- !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "resume"]
 - !private ["Ps23CustomStringConvertible", "shared"]
 - !private ["Ps23CustomStringConvertible", "statusCode"]
@@ -131,13 +139,20 @@ depends-member:
 - !private ["Vs10Dictionary", "SubSequence"]
 - !private ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "subscript"]
+- !private ["CSo14DispatchObject", "async"]
+- !private ["CSo14DispatchObject", "main"]
+- !private ["CSo13DispatchQueue", "async"]
+- !private ["CSo13DispatchQueue", "deinit"]
+- !private ["CSo13DispatchQueue", "main"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addValue"]
 - !private ["Ps9Equatable", "allowFragments"]
+- !private ["Ps9Equatable", "async"]
 - !private ["Ps9Equatable", "dataTask"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "jsonObject"]
+- !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "resume"]
 - !private ["Ps9Equatable", "shared"]
 - !private ["Ps9Equatable", "statusCode"]
@@ -160,9 +175,11 @@ depends-member:
 - !private ["CSo15HTTPURLResponse", "statusCode"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addValue"]
+- !private ["Ps8Hashable", "async"]
 - !private ["Ps8Hashable", "dataTask"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "jsonObject"]
+- !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "resume"]
 - !private ["Ps8Hashable", "shared"]
 - !private ["Ps8Hashable", "statusCode"]
@@ -212,16 +229,20 @@ depends-member:
 - ["CSo19NSMutableURLRequest", "deinit"]
 - !private ["CSo19NSMutableURLRequest", "init"]
 - !private ["CSo8NSObject", "addValue"]
+- !private ["CSo8NSObject", "async"]
 - !private ["CSo8NSObject", "dataTask"]
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "jsonObject"]
+- !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "resume"]
 - !private ["CSo8NSObject", "shared"]
 - !private ["CSo8NSObject", "statusCode"]
 - !private ["PSo16NSObjectProtocol", "addValue"]
+- !private ["PSo16NSObjectProtocol", "async"]
 - !private ["PSo16NSObjectProtocol", "dataTask"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "jsonObject"]
+- !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "resume"]
 - !private ["PSo16NSObjectProtocol", "shared"]
 - !private ["PSo16NSObjectProtocol", "statusCode"]
@@ -233,6 +254,8 @@ depends-member:
 - !private ["CSo5NSURL", "init"]
 - !private ["CSo12NSURLRequest", "addValue"]
 - !private ["CSo12NSURLRequest", "init"]
+- !private ["CSo9OS_object", "async"]
+- !private ["CSo9OS_object", "main"]
 - !private ["Ps9OptionSet", "allowFragments"]
 - ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "Element"]
@@ -268,11 +291,10 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - !private ["C14SimpleAroundMe9StopPoint", "deinit"]
 - !private ["C14SimpleAroundMe9StopPoint", "init"]
-- !private ["C14SimpleAroundMe9StopPoint", "name"]
-- ["C14SimpleAroundMe12StopSchedule", "deinit"]
+- !private ["C14SimpleAroundMe12StopSchedule", "deinit"]
 - !private ["C14SimpleAroundMe12StopSchedule", "init"]
-- !private ["C14SimpleAroundMe12StopSchedule", "stopPoint"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "AnyObject"]
+- !private ["C14SimpleAroundMe20StopSchedulesBuilder", "DispatchQueue"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "HTTPURLResponse"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "JSONSerialization"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "NSMutableURLRequest"]
@@ -284,7 +306,7 @@ depends-member:
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "URL"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "URLRequest"]
 - !private ["C14SimpleAroundMe20StopSchedulesBuilder", "URLSession"]
-- !private ["C14SimpleAroundMe20StopSchedulesBuilder", "Void"]
+- ["C14SimpleAroundMe20StopSchedulesBuilder", "Void"]
 - ["C14SimpleAroundMe20StopSchedulesBuilder", "build"]
 - ["C14SimpleAroundMe20StopSchedulesBuilder", "coords"]
 - ["C14SimpleAroundMe20StopSchedulesBuilder", "coverage"]
@@ -330,9 +352,11 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addValue"]
+- !private ["Ps9_Hashable", "async"]
 - !private ["Ps9_Hashable", "dataTask"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "jsonObject"]
+- !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "resume"]
 - !private ["Ps9_Hashable", "shared"]
 - !private ["Ps9_Hashable", "statusCode"]
@@ -361,6 +385,8 @@ depends-nominal:
 - !private "Ps23CustomStringConvertible"
 - !private "V10Foundation4Data"
 - !private "Vs10Dictionary"
+- !private "CSo14DispatchObject"
+- !private "CSo13DispatchQueue"
 - !private "Sd"
 - !private "Ps9Equatable"
 - !private "Ps5Error"
@@ -398,6 +424,7 @@ depends-nominal:
 - !private "CSo8NSString"
 - "CSo5NSURL"
 - !private "CSo12NSURLRequest"
+- !private "CSo9OS_object"
 - !private "Ps9OptionSet"
 - "Sq"
 - !private "Ps22RandomAccessCollection"
@@ -410,7 +437,7 @@ depends-nominal:
 - !private "Ps10SetAlgebra"
 - !private "Vs5Slice"
 - !private "C14SimpleAroundMe9StopPoint"
-- "C14SimpleAroundMe12StopSchedule"
+- !private "C14SimpleAroundMe12StopSchedule"
 - "C14SimpleAroundMe20StopSchedulesBuilder"
 - "SS"
 - !private "Ps16TextOutputStream"
@@ -449,4 +476,4 @@ depends-external:
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "0c9fb57d8dd65427ac43c085aabfe17e"
+interface-hash: "3134397720196fad3ba90e41f36c1051"

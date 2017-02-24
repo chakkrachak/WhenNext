@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C14SimpleAroundMe11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillResignActive"
-- "applicationWillTerminate"
 - "window"
-- "applicationWillEnterForeground"
-- "applicationDidBecomeActive"
-- "applicationDidEnterBackground"
 - "application"
+- "applicationDidBecomeActive"
+- "applicationWillEnterForeground"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "applicationWillResignActive"
 depends-top-level:
 - "UIResponder"
-- "AppDelegate"
-- "UIApplicationLaunchOptionsKey"
-- "UIApplication"
-- "UIWindow"
+- !private "BooleanLiteralType"
 - "UIApplicationDelegate"
 - "Bool"
-- !private "BooleanLiteralType"
+- "UIApplication"
+- "UIWindow"
+- "AppDelegate"
+- "UIApplicationLaunchOptionsKey"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]

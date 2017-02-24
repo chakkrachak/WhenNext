@@ -11,11 +11,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let cellIdentifier = "StopPointCellIdentifier"
     var stopSchedules:[StopSchedule] = []
-    
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stopSchedules = StopSchedulesBuilder(token: "", coverage: "fr-idf").withCoords("2.377310;48.847002").build()
+        StopSchedulesBuilder(token: "", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
+        {
+        (stopSchedules:[StopSchedule]) -> Void in
+            self.stopSchedules = stopSchedules
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,5 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+
+
 }
 
