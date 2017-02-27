@@ -5,10 +5,8 @@
 
 import Foundation
 
-class StopSchedule {
+struct StopSchedule {
     var stopPoint:StopPoint
-
-    init(stopPoint: StopPoint) {
-        self.stopPoint = stopPoint
-    }
+    var dateTimes:[DateTime]
+    var displayInformations:DisplayInformations
 }

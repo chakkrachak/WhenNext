@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5A1AA262CDCA68C50FB568AA /* StopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */; };
+		5A1AA78F1FB5A87674FE4DC2 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA985AF8C6B259C6228E6 /* Coord.swift */; };
+		5A1AA916BE6EB5DFF71254F6 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */; };
+		5A1AAB227E8BC6138805B263 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAFC0243695055EA7C5D3 /* DateTime.swift */; };
 		5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */; };
 		5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */; };
 		FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */; };
@@ -18,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
 		5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
+		5A1AA985AF8C6B259C6228E6 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
 		5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
+		5A1AAFC0243695055EA7C5D3 /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		FE5DA16C1E5F2E5E0069C71E /* SimpleAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5DA1711E5F2E5E0069C71E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +52,9 @@
 			children = (
 				5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */,
 				5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */,
+				5A1AA985AF8C6B259C6228E6 /* Coord.swift */,
+				5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */,
+				5A1AAFC0243695055EA7C5D3 /* DateTime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +192,9 @@
 				5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */,
 				5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */,
 				5A1AA262CDCA68C50FB568AA /* StopSchedule.swift in Sources */,
+				5A1AA78F1FB5A87674FE4DC2 /* Coord.swift in Sources */,
+				5A1AA916BE6EB5DFF71254F6 /* DisplayInformations.swift in Sources */,
+				5A1AAB227E8BC6138805B263 /* DateTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

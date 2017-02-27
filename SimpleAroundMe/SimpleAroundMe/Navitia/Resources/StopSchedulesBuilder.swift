@@ -22,12 +22,39 @@ class StopSchedulesBuilder {
         return self
     }
 
+    func parseJsonResponse(_ stopSchedulesJsonResponse:[String:AnyObject]) -> StopSchedule {
+        let stopPoint = stopSchedulesJsonResponse["stop_point"] as! [String: AnyObject]
+        let dateTimes = stopSchedulesJsonResponse["date_times"] as! [[String: AnyObject]]
+        let displayInformations = stopSchedulesJsonResponse["display_informations"] as! [String: AnyObject]
+
+        return StopSchedule(
+                stopPoint: StopPoint(
+                        name: stopPoint["name"] as! String,
+                        label: stopPoint["label"] as! String,
+                        coord: Coord(
+                                lat: (stopPoint["coord"] as! [String: String])["lat"]! as String,
+                                lon: (stopPoint["coord"] as! [String: String])["lon"]! as String
+                        )
+                ),
+                dateTimes: [
+                        DateTime(dateTime: dateTimes[0]["date_time"] as! String)
+                ],
+                displayInformations: DisplayInformations(
+                        color: displayInformations["color"] as! String,
+                        commercialMode: displayInformations["commercial_mode"] as! String,
+                        direction: displayInformations["direction"] as! String,
+                        label: displayInformations["label"] as! String,
+                        textColor: displayInformations["text_color"] as! String
+                )
+        )
+    }
+    
     func build(callback: @escaping ([StopSchedule]) -> (Void)) {
-        let url:String = "https://api.navitia.io/v1/coverage/fr-idf/coords/2.377310%3B48.847002/stop_schedules?"
+        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(self.coords!)/stop_schedules?"
         
         let requestURL: NSURL = NSURL(string: url)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
-        urlRequest.addValue("9e304161-bb97-4210-b13d-c71eaf58961c", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue(self.token, forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest as URLRequest) {
             (data, response, error) -> Void in
@@ -37,19 +64,12 @@ class StopSchedulesBuilder {
             
             if (statusCode == 200) {
                 do{
-                    
                     let json:[String:AnyObject] = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
 
-                    if let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as? [[String: AnyObject]] {
-                        for stopSchedule in jsonStopSchedules {
-                            if let stopPoint = stopSchedule["stop_point"] as? [String: AnyObject] {
-                                if let name = stopPoint["name"] as? String {
-                                    self.stopSchedules.append(StopSchedule(stopPoint: StopPoint(name)))
-                                }
-                            }
-                        }
+                    let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as! [[String: AnyObject]]
+                    for stopSchedule in jsonStopSchedules {
+                        self.stopSchedules.append(self.parseJsonResponse(stopSchedule))
                     }
-                    
                 } catch {
                     print("Error with Json: \(error)")
                 }

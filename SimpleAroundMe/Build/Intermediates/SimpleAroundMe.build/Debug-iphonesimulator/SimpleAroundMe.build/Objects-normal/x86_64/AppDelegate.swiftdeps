@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C14SimpleAroundMe11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "application"
-- "applicationDidBecomeActive"
-- "applicationWillEnterForeground"
-- "applicationWillTerminate"
 - "applicationDidEnterBackground"
+- "application"
+- "window"
+- "applicationWillEnterForeground"
+- "applicationDidBecomeActive"
+- "applicationWillTerminate"
 - "applicationWillResignActive"
 depends-top-level:
 - "UIResponder"
-- !private "BooleanLiteralType"
-- "UIApplicationDelegate"
 - "Bool"
-- "UIApplication"
+- !private "BooleanLiteralType"
 - "UIWindow"
+- "UIApplicationDelegate"
+- "UIApplication"
 - "AppDelegate"
 - "UIApplicationLaunchOptionsKey"
 depends-member:

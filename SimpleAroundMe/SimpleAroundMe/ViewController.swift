@@ -8,6 +8,21 @@
 
 import UIKit
 
+class StopPointViewCell: UITableViewCell {
+    @IBOutlet weak var lineLabel: UILabel!
+    @IBOutlet weak var directionLabel: UILabel!
+    @IBOutlet weak var stopPointNameLabel: UILabel!
+    @IBOutlet weak var nextScheduleLabel: UILabel!
+    
+    func updateWith(stopSchedule:StopSchedule) {
+        self.stopPointNameLabel.text = stopSchedule.stopPoint.name
+        self.lineLabel.text = stopSchedule.displayInformations.label
+        self.directionLabel.text = stopSchedule.displayInformations.direction
+        let nextDeparture:Int = Int((stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow/60).rounded())
+        self.nextScheduleLabel.text = nextDeparture.description
+    }
+}
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let cellIdentifier = "StopPointCellIdentifier"
     var stopSchedules:[StopSchedule] = []
@@ -16,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        StopSchedulesBuilder(token: "", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
+        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
         {
         (stopSchedules:[StopSchedule]) -> Void in
             self.stopSchedules = stopSchedules
@@ -37,12 +52,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return stopSchedules.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 105;//Choose your custom row height
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath) as! StopPointViewCell
         
-        let stopSchedule:StopSchedule = stopSchedules[indexPath.row]
-        
-        cell.textLabel?.text = stopSchedule.stopPoint.name
+        cell.updateWith(stopSchedule:stopSchedules[indexPath.row])
         
         return cell
     }

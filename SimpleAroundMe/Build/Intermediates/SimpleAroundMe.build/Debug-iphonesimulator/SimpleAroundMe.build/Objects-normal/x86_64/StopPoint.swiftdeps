@@ -2,25 +2,27 @@
 provides-top-level:
 - "StopPoint"
 provides-nominal:
-- "C14SimpleAroundMe9StopPoint"
+- "V14SimpleAroundMe9StopPoint"
 provides-member:
-- ["C14SimpleAroundMe9StopPoint", ""]
+- ["V14SimpleAroundMe9StopPoint", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- "Coord"
 - "StopPoint"
 - "String"
-- "AssignmentPrecedence"
 depends-member:
-- !private ["Ps9AnyObject", "name"]
-- ["Ps9AnyObject", ""]
-- ["C14SimpleAroundMe9StopPoint", "String"]
-- ["C14SimpleAroundMe9StopPoint", "deinit"]
-- ["C14SimpleAroundMe9StopPoint", "init"]
-- ["C14SimpleAroundMe9StopPoint", "name"]
+- ["V14SimpleAroundMe5Coord", "deinit"]
+- ["V14SimpleAroundMe9StopPoint", "Coord"]
+- ["V14SimpleAroundMe9StopPoint", "String"]
+- ["V14SimpleAroundMe9StopPoint", "coord"]
+- ["V14SimpleAroundMe9StopPoint", "deinit"]
+- ["V14SimpleAroundMe9StopPoint", "init"]
+- ["V14SimpleAroundMe9StopPoint", "label"]
+- ["V14SimpleAroundMe9StopPoint", "name"]
 - ["SS", "deinit"]
 depends-nominal:
-- "Ps9AnyObject"
-- "C14SimpleAroundMe9StopPoint"
+- "V14SimpleAroundMe5Coord"
+- "V14SimpleAroundMe9StopPoint"
 - "SS"
 depends-dynamic-lookup:
 depends-external:
@@ -34,4 +36,4 @@ depends-external:
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/XcodeAllVersions/8.1/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "b5511710e197bc3af7358fa6c568baa9"
+interface-hash: "cc9c79ac0ca643823138584ffab2bdb8"

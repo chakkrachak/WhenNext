@@ -5,10 +5,8 @@
 
 import Foundation
 
-class StopPoint {
+struct StopPoint {
     var name:String
-
-    init(_ name: String) {
-        self.name = name
-    }
+    var label:String
+    var coord:Coord
 }
