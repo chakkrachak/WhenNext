@@ -18,8 +18,12 @@ class StopPointViewCell: UITableViewCell {
         self.stopPointNameLabel.text = stopSchedule.stopPoint.name
         self.lineLabel.text = stopSchedule.displayInformations.label
         self.directionLabel.text = stopSchedule.displayInformations.direction
-        let nextDeparture:Int = Int((stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow/60).rounded())
-        self.nextScheduleLabel.text = nextDeparture.description
+        var nextDepartureDisplayed:String = "0"
+        let nextDeparture:Double = (stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow/60).rounded()
+        if (nextDeparture > 0) {
+            nextDepartureDisplayed = Int(nextDeparture).description
+        }
+        self.nextScheduleLabel.text = nextDepartureDisplayed
     }
 }
 

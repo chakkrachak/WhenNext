@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
 options: "7e4902dca1daa65662b18d985f593b42"
-build_time: [541520331, 863197000]
+build_time: [541520696, 440538000]
 inputs:
-  "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/ViewController.swift": [541520328, 0]
+  "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/ViewController.swift": [541520695, 0]
   "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/AppDelegate.swift": [541176670, 0]
   "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/Navitia/Models/StopPoint.swift": [541510704, 0]
   "/Users/cchak/dev/WhenNext/SimpleAroundMe/SimpleAroundMe/Navitia/Resources/StopSchedulesBuilder.swift": [541515321, 0]
