@@ -1,7 +1,0 @@
-version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
-options: "1b7a3c8c6e944faed095ac241824493b"
-build_time: [541174823, 252002000]
-inputs:
-  "/Users/cchak/dev/WhenNext/WhenNext/WhenNext/AroundMeViewController.swift": [541174821, 0]
-  "/Users/cchak/dev/WhenNext/WhenNext/WhenNext/ViewController.swift": [540927470, 0]
-  "/Users/cchak/dev/WhenNext/WhenNext/WhenNext/AppDelegate.swift": [540927470, 0]
