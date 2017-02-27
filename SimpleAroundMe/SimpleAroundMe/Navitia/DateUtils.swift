@@ -21,7 +21,6 @@ extension TimeInterval {
             outputUnit = "hours"
         }
 
-        print(realLengthInMinutes, outputLength, outputUnit)
         return (outputLength, outputUnit)
     }
 }

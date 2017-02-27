@@ -17,10 +17,18 @@ class StopPointViewCell: UITableViewCell {
     
     func updateWith(stopSchedule:StopSchedule) {
         self.stopPointNameLabel.text = stopSchedule.stopPoint.name
+        self.stopPointNameLabel.textColor = UIColor(hexString: stopSchedule.displayInformations.textColor)
+
         self.lineLabel.text = stopSchedule.displayInformations.label
+        self.lineLabel.textColor = UIColor(hexString: stopSchedule.displayInformations.textColor)
+
         self.directionLabel.text = stopSchedule.displayInformations.direction
+        self.directionLabel.textColor = UIColor(hexString: stopSchedule.displayInformations.textColor)
+
         (self.nextScheduleLabel.text!, self.unitLabel.text!) = stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow.inFutureSmartDisplay()
-        
+        self.nextScheduleLabel.textColor = UIColor(hexString: stopSchedule.displayInformations.textColor)
+        self.unitLabel.textColor = UIColor(hexString: stopSchedule.displayInformations.textColor)
+
         self.backgroundColor = UIColor(hexString: stopSchedule.displayInformations.color)
     }
 }
