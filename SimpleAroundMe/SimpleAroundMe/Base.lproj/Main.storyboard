@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rkd-kk-ADX" id="xC0-OE-KxI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASp-uN-Fhd">
@@ -90,7 +90,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Around Me" id="1DO-4O-xX8">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ZKu-P8-5Rq"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ZKu-P8-5Rq">
+                                            <connections>
+                                                <action selector="refreshStopSchedulesAroundMe:" destination="BYZ-38-t0r" id="smh-i2-b1B"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

@@ -38,15 +38,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var stopSchedules:[StopSchedule] = []
     @IBOutlet weak var tableView: UITableView!
 
+    func populateTableWithData() {
+        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
+                {
+                    (stopSchedules:[StopSchedule]) -> Void in
+                    self.stopSchedules = stopSchedules
+                    self.tableView.reloadData()
+                })
+    }
+
+    @IBAction func refreshStopSchedulesAroundMe(_ sender: Any) {
+        self.populateTableWithData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
-        {
-        (stopSchedules:[StopSchedule]) -> Void in
-            self.stopSchedules = stopSchedules
-            self.tableView.reloadData()
-        })
+        self.populateTableWithData()
     }
 
     override func didReceiveMemoryWarning() {
