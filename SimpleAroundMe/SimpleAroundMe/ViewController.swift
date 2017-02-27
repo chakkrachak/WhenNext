@@ -13,17 +13,13 @@ class StopPointViewCell: UITableViewCell {
     @IBOutlet weak var directionLabel: UILabel!
     @IBOutlet weak var stopPointNameLabel: UILabel!
     @IBOutlet weak var nextScheduleLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
     
     func updateWith(stopSchedule:StopSchedule) {
         self.stopPointNameLabel.text = stopSchedule.stopPoint.name
         self.lineLabel.text = stopSchedule.displayInformations.label
         self.directionLabel.text = stopSchedule.displayInformations.direction
-        var nextDepartureDisplayed:String = "0"
-        let nextDeparture:Double = (stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow/60).rounded()
-        if (nextDeparture > 0) {
-            nextDepartureDisplayed = Int(nextDeparture).description
-        }
-        self.nextScheduleLabel.text = nextDepartureDisplayed
+        (self.nextScheduleLabel.text!, self.unitLabel.text!) = stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow.inFutureSmartDisplay()
     }
 }
 

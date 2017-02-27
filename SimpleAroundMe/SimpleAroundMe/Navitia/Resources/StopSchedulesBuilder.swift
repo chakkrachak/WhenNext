@@ -37,7 +37,7 @@ class StopSchedulesBuilder {
                         )
                 ),
                 dateTimes: [
-                        DateTime(dateTime: dateTimes[0]["date_time"] as! String)
+                        DateTime(dateTime:(dateTimes[0]["date_time"] as! String).dateFromNativiaFormat()!)
                 ],
                 displayInformations: DisplayInformations(
                         color: displayInformations["color"] as! String,

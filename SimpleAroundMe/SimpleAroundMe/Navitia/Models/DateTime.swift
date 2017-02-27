@@ -5,13 +5,15 @@
 
 import Foundation
 
-struct DateTime {
-    var dateTime:Date
-
-    init(dateTime:String) {
+extension String {
+    func dateFromNativiaFormat() -> Date? {
         let dateFormatter:DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd'T'HHmmss"
 
-        self.dateTime = dateFormatter.date(from: dateTime)!
+        return dateFormatter.date(from: self)!
     }
+}
+
+struct DateTime {
+    var dateTime:Date
 }
