@@ -20,6 +20,8 @@ class StopPointViewCell: UITableViewCell {
         self.lineLabel.text = stopSchedule.displayInformations.label
         self.directionLabel.text = stopSchedule.displayInformations.direction
         (self.nextScheduleLabel.text!, self.unitLabel.text!) = stopSchedule.dateTimes[0].dateTime.timeIntervalSinceNow.inFutureSmartDisplay()
+        
+        self.backgroundColor = UIColor(hexString: stopSchedule.displayInformations.color)
     }
 }
 

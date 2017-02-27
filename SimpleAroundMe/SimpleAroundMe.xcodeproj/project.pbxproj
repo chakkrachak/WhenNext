@@ -14,6 +14,7 @@
 		5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */; };
 		5A1AAD8B132FD86FBBB5212A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */; };
 		5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */; };
+		FE473EDB1E648EE300FCAD8A /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */; };
 		FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */; };
 		FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA1711E5F2E5E0069C71E /* ViewController.swift */; };
 		FE5DA1751E5F2E5E0069C71E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5DA1731E5F2E5E0069C71E /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
 		5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		FE5DA16C1E5F2E5E0069C71E /* SimpleAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5DA1711E5F2E5E0069C71E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */,
+				FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */,
+				FE473EDB1E648EE300FCAD8A /* ColorUtils.swift in Sources */,
 				FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */,
 				5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */,
 				5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */,
