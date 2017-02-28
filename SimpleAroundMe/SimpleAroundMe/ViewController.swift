@@ -54,12 +54,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse) {
             locationManager.startUpdatingLocation()
             currentLocation = locationManager.location
-            print("CHECK POSITION HERE >>>> ", currentLocation?.description ?? "DAMNED")
             locationManager.stopUpdatingLocation()
         }
         
         StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
-            .withCoords("2.377310;48.847002")
+            .withCoords(Coord(lat:currentLocation?.coordinate.latitude.description ?? "2.3466323", lon:currentLocation?.coordinate.longitude.description ?? "48.8582085"))
             .withDistance(1000)
             .withCount(30)
             .build(callback:

@@ -8,7 +8,7 @@ import Foundation
 class StopSchedulesBuilder {
     var coverage:String
     var token:String
-    var coords:String?
+    var coords:Coord?
     var distance:Int?
     var count:Int?
     var stopSchedules:[StopSchedule]
@@ -21,7 +21,7 @@ class StopSchedulesBuilder {
         self.count = 20
     }
 
-    func withCoords(_ coords: String) -> StopSchedulesBuilder {
+    func withCoords(_ coords: Coord) -> StopSchedulesBuilder {
         self.coords = coords
         return self
     }
@@ -37,7 +37,7 @@ class StopSchedulesBuilder {
     }
 
     func build(callback: @escaping ([StopSchedule]) -> (Void)) {
-        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(self.coords!)/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
+        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(self.coords!.lat);\(self.coords!.lon)/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
         print(url)
         let requestURL: NSURL = NSURL(string: url)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
