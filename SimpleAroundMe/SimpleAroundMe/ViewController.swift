@@ -39,7 +39,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
 
     func populateTableWithData() {
-        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf").withCoords("2.377310;48.847002").build(callback:
+        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
+            .withCoords("2.377310;48.847002")
+            .withDistance(1000)
+            .withCount(30)
+            .build(callback:
                 {
                     (stopSchedules:[StopSchedule]) -> Void in
                     self.stopSchedules = stopSchedules
