@@ -39,29 +39,53 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var stopSchedules:[StopSchedule] = []
     @IBOutlet weak var tableView: UITableView!
     let locationManager = CLLocationManager()
-    var currentLocation:CLLocation?
+    var currentlyUpdatingPosition:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
-        
-        self.populateTableWithData()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse) {
+            locationManager.startMonitoringSignificantLocationChanges()
+        }
+        if (locationManager.location != nil) {
+            self.populateTableWithDataFromLocation(CLLocation(latitude: locationManager.location!.coordinate.latitude, longitude: locationManager.location!.coordinate.longitude))
+        }
+        self.updateLocation()
     }
     
-    func populateTableWithData() {
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse) {
-            locationManager.startUpdatingLocation()
-            currentLocation = locationManager.location
-            locationManager.stopUpdatingLocation()
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Trying to process location update")
+        if (self.currentlyUpdatingPosition) {
+            self.currentlyUpdatingPosition = false
+            print("  Changing location")
+            let currentLocation: CLLocation? = locations.last
+            manager.stopUpdatingLocation()
+            print("  Changed location", currentLocation?.description ?? "DAMNED")
+            if (currentLocation != nil) {
+                self.populateTableWithDataFromLocation(currentLocation!)
+            }
         }
-        
+    }
+
+    func updateLocation() {
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse) {
+            print("Update location")
+            self.currentlyUpdatingPosition = true
+            locationManager.startUpdatingLocation()
+        }
+    }
+
+    func populateTableWithDataFromLocation(_ currentLocation:CLLocation) {
         StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
-            .withCoords(Coord(lat:currentLocation?.coordinate.latitude.description ?? "2.3466323", lon:currentLocation?.coordinate.longitude.description ?? "48.8582085"))
-            .withDistance(1000)
-            .withCount(30)
-            .build(callback:
+                .withCoords(Coord(lat:currentLocation.coordinate.latitude.description, lon:currentLocation.coordinate.longitude.description))
+                .withDistance(1000)
+                .withCount(30)
+                .build(callback:
                 {
                     (stopSchedules:[StopSchedule]) -> Void in
                     self.stopSchedules = stopSchedules
@@ -70,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     @IBAction func refreshStopSchedulesAroundMe(_ sender: Any) {
-        self.populateTableWithData()
+        self.updateLocation()
     }
     
     override func didReceiveMemoryWarning() {

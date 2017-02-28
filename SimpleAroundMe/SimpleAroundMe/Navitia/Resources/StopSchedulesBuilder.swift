@@ -55,7 +55,10 @@ class StopSchedulesBuilder {
 
                     let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as! [[String: AnyObject]]
                     for stopSchedule in jsonStopSchedules {
-                        self.stopSchedules.append(self.parseJsonResponse(stopSchedule))
+                        let currentStopSchedule:StopSchedule? = self.parseJsonResponse(stopSchedule)
+                        if currentStopSchedule != nil {
+                            self.stopSchedules.append(currentStopSchedule!)
+                        }
                     }
                 } catch {
                     print("Error with Json: \(error)")
@@ -72,30 +75,35 @@ class StopSchedulesBuilder {
         task.resume()
     }
     
-    func parseJsonResponse(_ stopSchedulesJsonResponse:[String:AnyObject]) -> StopSchedule {
+    func parseJsonResponse(_ stopSchedulesJsonResponse:[String:AnyObject]) -> StopSchedule? {
         let stopPoint = stopSchedulesJsonResponse["stop_point"] as! [String: AnyObject]
         let dateTimes = stopSchedulesJsonResponse["date_times"] as! [[String: AnyObject]]
         let displayInformations = stopSchedulesJsonResponse["display_informations"] as! [String: AnyObject]
         
-        return StopSchedule(
-            stopPoint: StopPoint(
-                name: stopPoint["name"] as! String,
-                label: stopPoint["label"] as! String,
-                coord: Coord(
-                    lat: (stopPoint["coord"] as! [String: String])["lat"]! as String,
-                    lon: (stopPoint["coord"] as! [String: String])["lon"]! as String
+        var resultStopSchedule:StopSchedule? = nil
+        if dateTimes.count > 0 {
+            resultStopSchedule = StopSchedule(
+                stopPoint: StopPoint(
+                    name: stopPoint["name"] as! String,
+                    label: stopPoint["label"] as! String,
+                    coord: Coord(
+                        lat: (stopPoint["coord"] as! [String: String])["lat"]! as String,
+                        lon: (stopPoint["coord"] as! [String: String])["lon"]! as String
+                    )
+                ),
+                dateTimes: [
+                    DateTime(dateTime:(dateTimes[0]["date_time"] as! String).dateFromNativiaFormat()!)
+                ],
+                displayInformations: DisplayInformations(
+                    color: displayInformations["color"] as! String,
+                    commercialMode: displayInformations["commercial_mode"] as! String,
+                    direction: displayInformations["direction"] as! String,
+                    label: displayInformations["label"] as! String,
+                    textColor: displayInformations["text_color"] as! String
                 )
-            ),
-            dateTimes: [
-                DateTime(dateTime:(dateTimes[0]["date_time"] as! String).dateFromNativiaFormat()!)
-            ],
-            displayInformations: DisplayInformations(
-                color: displayInformations["color"] as! String,
-                commercialMode: displayInformations["commercial_mode"] as! String,
-                direction: displayInformations["direction"] as! String,
-                label: displayInformations["label"] as! String,
-                textColor: displayInformations["text_color"] as! String
             )
-        )
+        }
+        
+        return resultStopSchedule
     }
 }
