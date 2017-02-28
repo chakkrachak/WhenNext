@@ -108,6 +108,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 .build(callback: {
                     (stopSchedules:[StopSchedule]) -> Void in
                     self.stopSchedules = stopSchedules
+                    self.stopSchedules.sort() {
+                        $0.dateTimes[0].dateTime < $1.dateTimes[0].dateTime
+                    }
                     self.tableView.reloadData()
                 })
     }
