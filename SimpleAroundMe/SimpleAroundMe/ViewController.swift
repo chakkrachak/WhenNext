@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class StopPointViewCell: UITableViewCell {
     @IBOutlet weak var lineLabel: UILabel!
@@ -33,12 +34,30 @@ class StopPointViewCell: UITableViewCell {
     }
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     let cellIdentifier = "StopPointCellIdentifier"
     var stopSchedules:[StopSchedule] = []
     @IBOutlet weak var tableView: UITableView!
+    let locationManager = CLLocationManager()
+    var currentLocation:CLLocation?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        
+        self.populateTableWithData()
+    }
+    
     func populateTableWithData() {
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways || CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse) {
+            locationManager.startUpdatingLocation()
+            currentLocation = locationManager.location
+            print("CHECK POSITION HERE >>>> ", currentLocation?.description ?? "DAMNED")
+            locationManager.stopUpdatingLocation()
+        }
+        
         StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
             .withCoords("2.377310;48.847002")
             .withDistance(1000)
@@ -55,12 +74,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.populateTableWithData()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.populateTableWithData()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

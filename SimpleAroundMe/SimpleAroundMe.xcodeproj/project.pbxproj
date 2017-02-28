@@ -15,6 +15,7 @@
 		5A1AAD8B132FD86FBBB5212A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */; };
 		5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */; };
 		FE473EDB1E648EE300FCAD8A /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */; };
+		FE473EDE1E65C55300FCAD8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */; };
 		FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */; };
 		FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA1711E5F2E5E0069C71E /* ViewController.swift */; };
 		FE5DA1751E5F2E5E0069C71E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5DA1731E5F2E5E0069C71E /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FE5DA16C1E5F2E5E0069C71E /* SimpleAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5DA1711E5F2E5E0069C71E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE473EDE1E65C55300FCAD8A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,11 +93,20 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		FE473EDC1E65C55300FCAD8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE5DA1631E5F2E5E0069C71E = {
 			isa = PBXGroup;
 			children = (
 				FE5DA16E1E5F2E5E0069C71E /* SimpleAroundMe */,
 				FE5DA16D1E5F2E5E0069C71E /* Products */,
+				FE473EDC1E65C55300FCAD8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
