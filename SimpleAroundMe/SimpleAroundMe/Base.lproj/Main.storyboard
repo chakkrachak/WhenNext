@@ -85,12 +85,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Hto-jd-0sC"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfb-AJ-Tcq">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfb-AJ-Tcq">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.37647059559822083" green="0.49019607901573181" blue="0.54509806632995605" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Around Me" id="1DO-4O-xX8">
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ZKu-P8-5Rq">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="refreshStopSchedulesAroundMe:" destination="BYZ-38-t0r" id="smh-i2-b1B"/>
                                             </connections>
@@ -99,7 +104,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.37647059559822083" green="0.49019607901573181" blue="0.54509806632995605" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="MxR-Fc-RHP" id="zl7-1B-IIj"/>
