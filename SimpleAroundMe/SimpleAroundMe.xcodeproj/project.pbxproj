@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A1AA25DBC783A1B715DAAD0 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA735783EBE9EF707C41E /* DateTime.swift */; };
-		5A1AA262CDCA68C50FB568AA /* StopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */; };
-		5A1AA78F1FB5A87674FE4DC2 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA985AF8C6B259C6228E6 /* Coord.swift */; };
-		5A1AA916BE6EB5DFF71254F6 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */; };
+		5A1AA1EBB478B4523F1006E2 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAFD52FB36768E13B6EFE /* Coord.swift */; };
+		5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1A1A2994F48AC1D0352 /* Coords.swift */; };
+		5A1AA555D4E41324FFF23AD3 /* CoordsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */; };
+		5A1AA5EE42A8EE8973183580 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA337D6323A8A24158004 /* DisplayInformations.swift */; };
+		5A1AAAFD628BADBDB2EFAA91 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */; };
+		5A1AABC43CE482D78B94E555 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1825AC351E908352F78 /* DateTime.swift */; };
 		5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */; };
 		5A1AAD8B132FD86FBBB5212A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */; };
-		5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */; };
+		5A1AADEC97643CC1346A33F1 /* StopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */; };
+		5A1AAE581A4AC18B9860DBA3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */; };
 		FE473EDB1E648EE300FCAD8A /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */; };
 		FE473EDE1E65C55300FCAD8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */; };
 		FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */; };
@@ -24,13 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
-		5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
-		5A1AA735783EBE9EF707C41E /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
-		5A1AA985AF8C6B259C6228E6 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		5A1AA1825AC351E908352F78 /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		5A1AA1A1A2994F48AC1D0352 /* Coords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coords.swift; sourceTree = "<group>"; };
+		5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordsBuilder.swift; sourceTree = "<group>"; };
+		5A1AA337D6323A8A24158004 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
+		5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
+		5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
-		5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
 		5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
+		5A1AAFD52FB36768E13B6EFE /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		FE473EDA1E648EE300FCAD8A /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FE5DA16C1E5F2E5E0069C71E /* SimpleAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,14 +60,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1AA0933936D8B93E07FFDC /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AAFD52FB36768E13B6EFE /* Coord.swift */,
+				5A1AA1825AC351E908352F78 /* DateTime.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		5A1AA3590DF2D54EE1E47C34 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AA337D6323A8A24158004 /* DisplayInformations.swift */,
+				5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */,
+				5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */,
+				5A1AA1A1A2994F48AC1D0352 /* Coords.swift */,
+				5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		5A1AA549C3ADE12BC1605812 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A1AAAF9CF05A854E8FDB412 /* StopPoint.swift */,
-				5A1AA4E69407BFD3D3D95A0C /* StopSchedule.swift */,
-				5A1AA985AF8C6B259C6228E6 /* Coord.swift */,
-				5A1AA08DDAB57EDB383EF877 /* DisplayInformations.swift */,
-				5A1AA735783EBE9EF707C41E /* DateTime.swift */,
+				5A1AA0933936D8B93E07FFDC /* Types */,
+				5A1AA3590DF2D54EE1E47C34 /* Classes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -70,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */,
+				5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,13 +233,16 @@
 				FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */,
 				FE473EDB1E648EE300FCAD8A /* ColorUtils.swift in Sources */,
 				FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */,
-				5A1AAFB1921A389311EE078E /* StopPoint.swift in Sources */,
 				5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */,
-				5A1AA262CDCA68C50FB568AA /* StopSchedule.swift in Sources */,
-				5A1AA78F1FB5A87674FE4DC2 /* Coord.swift in Sources */,
-				5A1AA916BE6EB5DFF71254F6 /* DisplayInformations.swift in Sources */,
-				5A1AA25DBC783A1B715DAAD0 /* DateTime.swift in Sources */,
 				5A1AAD8B132FD86FBBB5212A /* DateUtils.swift in Sources */,
+				5A1AA555D4E41324FFF23AD3 /* CoordsBuilder.swift in Sources */,
+				5A1AA1EBB478B4523F1006E2 /* Coord.swift in Sources */,
+				5A1AABC43CE482D78B94E555 /* DateTime.swift in Sources */,
+				5A1AA5EE42A8EE8973183580 /* DisplayInformations.swift in Sources */,
+				5A1AAAFD628BADBDB2EFAA91 /* StopPoint.swift in Sources */,
+				5A1AADEC97643CC1346A33F1 /* StopSchedule.swift in Sources */,
+				5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */,
+				5A1AAE581A4AC18B9860DBA3 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

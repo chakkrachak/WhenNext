@@ -35,6 +35,9 @@ class StopPointViewCell: UITableViewCell {
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
+    let token:String = "9e304161-bb97-4210-b13d-c71eaf58961c"
+    let coverage:String = "fr-idf"
+
     let cellIdentifier = "StopPointCellIdentifier"
     var stopSchedules:[StopSchedule] = []
     @IBOutlet weak var tableView: UITableView!
@@ -81,12 +84,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func populateTableWithDataFromLocation(_ currentLocation:CLLocation) {
-        StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
-                .withCoords(Coord(lat:currentLocation.coordinate.latitude.description, lon:currentLocation.coordinate.longitude.description))
+        let currentCoord = Coord(lat: currentLocation.coordinate.latitude.description, lon: currentLocation.coordinate.longitude.description)
+
+        CoordsBuilder(token: self.token, coverage: self.coverage)
+            .withCoord(currentCoord)
+            .build(callback: {
+                (coords:Coords) -> Void in
+                    let alertController = UIAlertController(title: "Current address", message: coords.address.label, preferredStyle: UIAlertControllerStyle.alert)
+
+                    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+                    {
+                        (result : UIAlertAction) -> Void in
+                        print("You pressed OK")
+                    }
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
+            })
+
+        StopSchedulesBuilder(token: self.token, coverage: self.coverage)
+                .withCoords(currentCoord)
                 .withDistance(1000)
                 .withCount(30)
-                .build(callback:
-                {
+                .build(callback: {
                     (stopSchedules:[StopSchedule]) -> Void in
                     self.stopSchedules = stopSchedules
                     self.tableView.reloadData()
