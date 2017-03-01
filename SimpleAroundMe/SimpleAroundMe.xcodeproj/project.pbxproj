@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A1AA1EBB478B4523F1006E2 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAFD52FB36768E13B6EFE /* Coord.swift */; };
 		5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1A1A2994F48AC1D0352 /* Coords.swift */; };
+		5A1AA42FAA0B9F1D911EEE04 /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */; };
 		5A1AA555D4E41324FFF23AD3 /* CoordsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */; };
 		5A1AA5EE42A8EE8973183580 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA337D6323A8A24158004 /* DisplayInformations.swift */; };
 		5A1AAAFD628BADBDB2EFAA91 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */; };
@@ -32,6 +33,7 @@
 		5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordsBuilder.swift; sourceTree = "<group>"; };
 		5A1AA337D6323A8A24158004 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
 		5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
+		5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
 		5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
 		5A1AACF3D2FD1118FD04FC7F /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */,
 				5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */,
+				5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				5A1AADEC97643CC1346A33F1 /* StopSchedule.swift in Sources */,
 				5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */,
 				5A1AAE581A4AC18B9860DBA3 /* Address.swift in Sources */,
+				5A1AA42FAA0B9F1D911EEE04 /* BaseNavitiaResourceBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

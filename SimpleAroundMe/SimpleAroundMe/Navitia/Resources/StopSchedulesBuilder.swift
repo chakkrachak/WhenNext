@@ -5,20 +5,18 @@
 
 import Foundation
 
-class StopSchedulesBuilder {
-    var coverage:String
-    var token:String
+class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
     var coord:Coord?
     var distance:Int?
     var count:Int?
     var stopSchedules:[StopSchedule]
 
-    init(token:String, coverage: String) {
-        self.token = token
-        self.coverage = coverage
+    override init(token:String, coverage: String) {
         self.stopSchedules = []
         self.distance = 1000
         self.count = 20
+
+        super.init(token: token, coverage: coverage)
     }
 
     func withCoords(_ coords: Coord) -> StopSchedulesBuilder {

@@ -5,15 +5,12 @@
 
 import Foundation
 
-class CoordsBuilder {
-    var coverage:String
-    var token:String
+class CoordsBuilder : BaseNavitiaResourceBuilder {
     var coord:Coord? = nil
     var coords:Coords? = nil
 
-    init(token:String, coverage: String) {
-        self.token = token
-        self.coverage = coverage
+    override init(token:String, coverage: String) {
+        super.init(token: token, coverage: coverage)
     }
 
     func withCoord(_ coord: Coord) -> CoordsBuilder {
