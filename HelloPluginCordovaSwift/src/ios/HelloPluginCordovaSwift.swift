@@ -21,7 +21,7 @@
         completion: nil
       )
 
-      DispatchQueue.main.asyncAfter(deadline: .now() + 50) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 3 ) {
         toastController.dismiss(
           animated: true,
           completion: nil
@@ -39,4 +39,21 @@
       callbackId: command.callbackId
     )
   }
+
+   @objc(giveMeAnArray:)
+    func giveMeAnArray(command: CDVInvokedUrlCommand) {
+      var pluginResult = CDVPluginResult(
+        status: CDVCommandStatus_ERROR
+      )
+
+      pluginResult = CDVPluginResult(
+          status: CDVCommandStatus_OK,
+          messageAs: ["TATA", "TOTO"]
+      )
+
+      self.commandDelegate!.send(
+        pluginResult,
+        callbackId: command.callbackId
+      )
+    }
 }
