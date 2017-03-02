@@ -9,50 +9,35 @@ declare var cordova:any;
   templateUrl: 'home.html'
 })
 export class HomePage {
-  items = [
-    'Pokémon Yellow',
-    'Super Metroid',
-    'Mega Man X',
-    'The Legend of Zelda',
-    'Pac-Man',
-    'Super Mario World',
-    'Street Fighter II',
-    'Half Life',
-    'Final Fantasy VII',
-    'Star Fox',
-    'Tetris',
-    'Donkey Kong III',
-    'GoldenEye 007',
-    'Doom',
-    'Fallout',
-    'GTA',
-    'Halo'
-  ];
+  items: string[];
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+      this.items = [
+          'Pokémon Yellow',
+          'Super Metroid',
+          'Mega Man X',
+          'The Legend of Zelda',
+          'Pac-Man',
+          'Super Mario World',
+          'Street Fighter II',
+          'Half Life',
+          'Final Fantasy VII',
+          'Star Fox',
+          'Tetris',
+          'Donkey Kong III',
+          'GoldenEye 007',
+          'Doom',
+          'Fallout',
+          'GTA',
+          'Halo'
+      ];
+  }
 
   testDesEnfers() {
-      cordova.plugins.HelloPluginCordova.coolMethod("Poulpi",
-          function(msg) {
-              alert("WORKING " + msg);
-          },
-          function(err) {
-              alert("Actually working too " + err);
-          }
-      );
-
-      cordova.plugins.HelloPluginCordovaSwift.coolMethod("Poulpine",
-          function(msg) {
-              alert("Swift WORKING " + msg);
-          },
-          function(err) {
-              alert("Swift Actually working too " + err);
-          }
-      );
-
+      var that = this;
       cordova.plugins.HelloPluginCordovaSwift.giveMeAnArray("PoulpinePilou",
           function(arrayResponse) {
-              alert("Swift WORKING array " + arrayResponse[0]);
+              that.items = ['TUTU'];
           },
           function(err) {
               alert("Swift Actually working array too " + err);
