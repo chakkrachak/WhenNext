@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugins-helloswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>HelloPluginCordovaSwift</name>
+    <js-module name="HelloPluginCordovaSwift" src="www/HelloPluginCordovaSwift.js">
+        <clobbers target="cordova.plugins.HelloPluginCordovaSwift" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HelloPluginCordovaSwift">
+                <param name="ios-package" value="HelloPluginCordovaSwift" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/HelloPluginCordovaSwift.swift" />
+    </platform>
+</plugin>

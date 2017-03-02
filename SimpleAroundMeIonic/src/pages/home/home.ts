@@ -40,5 +40,13 @@ export class HomePage {
               alert("Actually working too " + err);
           }
       );
+      cordova.plugins.HelloPluginCordovaSwift.coolMethod("Poulpine",
+          function(msg) {
+              alert("Swift WORKING " + msg);
+          },
+          function(err) {
+              alert("Swift Actually working too " + err);
+          }
+      );
   }
 }
