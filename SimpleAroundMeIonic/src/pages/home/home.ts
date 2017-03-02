@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+declare var cordova:any;
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -27,8 +29,16 @@ export class HomePage {
     'Halo'
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController) {}
 
+  testDesEnfers() {
+      cordova.plugins.HelloPluginCordova.coolMethod("Poulpi",
+          function(msg) {
+              alert("WORKING " + msg);
+          },
+          function(err) {
+              alert("Actually working too " + err);
+          }
+      );
   }
-
 }
