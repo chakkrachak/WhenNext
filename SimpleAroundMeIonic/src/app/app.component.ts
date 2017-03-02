@@ -18,13 +18,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
-      alert("TEST");
       cordova.plugins.HelloPluginCordova.coolMethod("BIFFLE",
-          function() {
-            alert("WORKING");
+          function(msg) {
+            alert("WORKING " + msg);
           },
-          function() {
-            alert("Actually working too");
+          function(err) {
+            alert("Actually working too " + err);
           });
     });
   }
