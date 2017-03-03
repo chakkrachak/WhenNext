@@ -5,11 +5,11 @@
 
 import Foundation
 
-class BaseNavitiaResourceBuilder {
-    var coverage:String
-    var token:String
+public class BaseNavitiaResourceBuilder {
+    public var coverage:String
+    public var token:String
 
-    init(token:String, coverage: String) {
+    public init(token:String, coverage: String) {
         self.token = token
         self.coverage = coverage
     }

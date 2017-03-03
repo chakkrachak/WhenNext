@@ -7,37 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A1AA1EBB478B4523F1006E2 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAFD52FB36768E13B6EFE /* Coord.swift */; };
-		5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1A1A2994F48AC1D0352 /* Coords.swift */; };
-		5A1AA42FAA0B9F1D911EEE04 /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */; };
-		5A1AA555D4E41324FFF23AD3 /* CoordsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */; };
-		5A1AA5EE42A8EE8973183580 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA337D6323A8A24158004 /* DisplayInformations.swift */; };
-		5A1AAAFD628BADBDB2EFAA91 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */; };
-		5A1AABC43CE482D78B94E555 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA1825AC351E908352F78 /* DateTime.swift */; };
-		5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */; };
-		5A1AADEC97643CC1346A33F1 /* StopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */; };
-		5A1AAE581A4AC18B9860DBA3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */; };
 		FE473EDE1E65C55300FCAD8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */; };
 		FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */; };
 		FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DA1711E5F2E5E0069C71E /* ViewController.swift */; };
 		FE5DA1751E5F2E5E0069C71E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5DA1731E5F2E5E0069C71E /* Main.storyboard */; };
 		FE5DA1771E5F2E5E0069C71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5DA1761E5F2E5E0069C71E /* Assets.xcassets */; };
 		FE5DA17A1E5F2E5E0069C71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5DA1781E5F2E5E0069C71E /* LaunchScreen.storyboard */; };
-		FEF4118B1E698F6D00AFB5E5 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411891E698F6D00AFB5E5 /* ColorUtils.swift */; };
-		FEF4118C1E698F6D00AFB5E5 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4118A1E698F6D00AFB5E5 /* DateUtils.swift */; };
+		FEF411DC1E69AB6A00AFB5E5 /* NavitiaSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEF411DB1E69AB5900AFB5E5 /* NavitiaSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEF411DD1E69AB6D00AFB5E5 /* NavitiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF411DB1E69AB5900AFB5E5 /* NavitiaSDK.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FEF411DA1E69AB5900AFB5E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEF411D61E69AB5900AFB5E5 /* NavitiaSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FEF411971E698FBE00AFB5E5;
+			remoteInfo = NavitiaSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FEF411B21E6990AF00AFB5E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FEF411DC1E69AB6A00AFB5E5 /* NavitiaSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		5A1AA1825AC351E908352F78 /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
-		5A1AA1A1A2994F48AC1D0352 /* Coords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coords.swift; sourceTree = "<group>"; };
-		5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordsBuilder.swift; sourceTree = "<group>"; };
-		5A1AA337D6323A8A24158004 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
-		5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
-		5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
-		5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
-		5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
-		5A1AAFD52FB36768E13B6EFE /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		FE473EDD1E65C55300FCAD8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FE5DA16C1E5F2E5E0069C71E /* SimpleAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5DA16F1E5F2E5E0069C71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +50,7 @@
 		FE5DA1761E5F2E5E0069C71E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE5DA1791E5F2E5E0069C71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE5DA17B1E5F2E5E0069C71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEF411891E698F6D00AFB5E5 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorUtils.swift; path = Common/ColorUtils.swift; sourceTree = "<group>"; };
-		FEF4118A1E698F6D00AFB5E5 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateUtils.swift; path = Common/DateUtils.swift; sourceTree = "<group>"; };
+		FEF411D61E69AB5900AFB5E5 /* NavitiaSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavitiaSDK.xcodeproj; path = ../NavitiaSDK/NavitiaSDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,62 +59,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE473EDE1E65C55300FCAD8A /* CoreLocation.framework in Frameworks */,
+				FEF411DD1E69AB6D00AFB5E5 /* NavitiaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A1AA0933936D8B93E07FFDC /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AAFD52FB36768E13B6EFE /* Coord.swift */,
-				5A1AA1825AC351E908352F78 /* DateTime.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		5A1AA3590DF2D54EE1E47C34 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AA337D6323A8A24158004 /* DisplayInformations.swift */,
-				5A1AAD0F48BFE4FA62214598 /* StopPoint.swift */,
-				5A1AA82F7378368B7F27E3B4 /* StopSchedule.swift */,
-				5A1AA1A1A2994F48AC1D0352 /* Coords.swift */,
-				5A1AA9EEEDB27727BAEF1AD8 /* Address.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5A1AA549C3ADE12BC1605812 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AA0933936D8B93E07FFDC /* Types */,
-				5A1AA3590DF2D54EE1E47C34 /* Classes */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		5A1AA749638D9AE8BF7E5F6E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AAA9D183AF809961425D8 /* StopSchedulesBuilder.swift */,
-				5A1AA1FCBEE69CED59C204B4 /* CoordsBuilder.swift */,
-				5A1AA9C63AE1527315CAECC8 /* BaseNavitiaResourceBuilder.swift */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5A1AABEBA80D8E1743FB54EB /* Navitia */ = {
-			isa = PBXGroup;
-			children = (
-				FEF411881E698F3500AFB5E5 /* Common */,
-				5A1AA549C3ADE12BC1605812 /* Models */,
-				5A1AA749638D9AE8BF7E5F6E /* Resources */,
-			);
-			path = Navitia;
-			sourceTree = "<group>";
-		};
 		FE473EDC1E65C55300FCAD8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +77,7 @@
 		FE5DA1631E5F2E5E0069C71E = {
 			isa = PBXGroup;
 			children = (
+				FEF411D61E69AB5900AFB5E5 /* NavitiaSDK.xcodeproj */,
 				FE5DA16E1E5F2E5E0069C71E /* SimpleAroundMe */,
 				FE5DA16D1E5F2E5E0069C71E /* Products */,
 				FE473EDC1E65C55300FCAD8A /* Frameworks */,
@@ -146,18 +101,16 @@
 				FE5DA1761E5F2E5E0069C71E /* Assets.xcassets */,
 				FE5DA1781E5F2E5E0069C71E /* LaunchScreen.storyboard */,
 				FE5DA17B1E5F2E5E0069C71E /* Info.plist */,
-				5A1AABEBA80D8E1743FB54EB /* Navitia */,
 			);
 			path = SimpleAroundMe;
 			sourceTree = "<group>";
 		};
-		FEF411881E698F3500AFB5E5 /* Common */ = {
+		FEF411D71E69AB5900AFB5E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FEF411891E698F6D00AFB5E5 /* ColorUtils.swift */,
-				FEF4118A1E698F6D00AFB5E5 /* DateUtils.swift */,
+				FEF411DB1E69AB5900AFB5E5 /* NavitiaSDK.framework */,
 			);
-			name = Common;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +123,7 @@
 				FE5DA1681E5F2E5E0069C71E /* Sources */,
 				FE5DA1691E5F2E5E0069C71E /* Frameworks */,
 				FE5DA16A1E5F2E5E0069C71E /* Resources */,
+				FEF411B21E6990AF00AFB5E5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,12 +162,28 @@
 			mainGroup = FE5DA1631E5F2E5E0069C71E;
 			productRefGroup = FE5DA16D1E5F2E5E0069C71E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FEF411D71E69AB5900AFB5E5 /* Products */;
+					ProjectRef = FEF411D61E69AB5900AFB5E5 /* NavitiaSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FE5DA16B1E5F2E5E0069C71E /* SimpleAroundMe */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FEF411DB1E69AB5900AFB5E5 /* NavitiaSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NavitiaSDK.framework;
+			remoteRef = FEF411DA1E69AB5900AFB5E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FE5DA16A1E5F2E5E0069C71E /* Resources */ = {
@@ -233,20 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF4118B1E698F6D00AFB5E5 /* ColorUtils.swift in Sources */,
 				FE5DA1721E5F2E5E0069C71E /* ViewController.swift in Sources */,
 				FE5DA1701E5F2E5E0069C71E /* AppDelegate.swift in Sources */,
-				5A1AACF9E5A8F07B24357008 /* StopSchedulesBuilder.swift in Sources */,
-				5A1AA555D4E41324FFF23AD3 /* CoordsBuilder.swift in Sources */,
-				5A1AA1EBB478B4523F1006E2 /* Coord.swift in Sources */,
-				5A1AABC43CE482D78B94E555 /* DateTime.swift in Sources */,
-				5A1AA5EE42A8EE8973183580 /* DisplayInformations.swift in Sources */,
-				5A1AAAFD628BADBDB2EFAA91 /* StopPoint.swift in Sources */,
-				5A1AADEC97643CC1346A33F1 /* StopSchedule.swift in Sources */,
-				5A1AA1FB2CC0967CFDBCA49D /* Coords.swift in Sources */,
-				FEF4118C1E698F6D00AFB5E5 /* DateUtils.swift in Sources */,
-				5A1AAE581A4AC18B9860DBA3 /* Address.swift in Sources */,
-				5A1AA42FAA0B9F1D911EEE04 /* BaseNavitiaResourceBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

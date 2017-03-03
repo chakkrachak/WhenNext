@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FEF4119C1E698FBE00AFB5E5 /* NavitiaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF4119A1E698FBE00AFB5E5 /* NavitiaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEF411CA1E69AB4300AFB5E5 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411BA1E69AB4300AFB5E5 /* ColorUtils.swift */; };
+		FEF411CB1E69AB4300AFB5E5 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411BB1E69AB4300AFB5E5 /* DateUtils.swift */; };
+		FEF411CC1E69AB4300AFB5E5 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411BE1E69AB4300AFB5E5 /* Address.swift */; };
+		FEF411CD1E69AB4300AFB5E5 /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411BF1E69AB4300AFB5E5 /* Coords.swift */; };
+		FEF411CE1E69AB4300AFB5E5 /* DisplayInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C01E69AB4300AFB5E5 /* DisplayInformations.swift */; };
+		FEF411CF1E69AB4300AFB5E5 /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C11E69AB4300AFB5E5 /* StopPoint.swift */; };
+		FEF411D01E69AB4300AFB5E5 /* StopSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C21E69AB4300AFB5E5 /* StopSchedule.swift */; };
+		FEF411D11E69AB4300AFB5E5 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C41E69AB4300AFB5E5 /* Coord.swift */; };
+		FEF411D21E69AB4300AFB5E5 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C51E69AB4300AFB5E5 /* DateTime.swift */; };
+		FEF411D31E69AB4300AFB5E5 /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C71E69AB4300AFB5E5 /* BaseNavitiaResourceBuilder.swift */; };
+		FEF411D41E69AB4300AFB5E5 /* CoordsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C81E69AB4300AFB5E5 /* CoordsBuilder.swift */; };
+		FEF411D51E69AB4300AFB5E5 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF411C91E69AB4300AFB5E5 /* StopSchedulesBuilder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FEF411971E698FBE00AFB5E5 /* NavitiaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavitiaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF4119A1E698FBE00AFB5E5 /* NavitiaSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavitiaSDK.h; sourceTree = "<group>"; };
+		FEF4119B1E698FBE00AFB5E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF411BA1E69AB4300AFB5E5 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		FEF411BB1E69AB4300AFB5E5 /* DateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		FEF411BE1E69AB4300AFB5E5 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		FEF411BF1E69AB4300AFB5E5 /* Coords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coords.swift; sourceTree = "<group>"; };
+		FEF411C01E69AB4300AFB5E5 /* DisplayInformations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInformations.swift; sourceTree = "<group>"; };
+		FEF411C11E69AB4300AFB5E5 /* StopPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
+		FEF411C21E69AB4300AFB5E5 /* StopSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedule.swift; sourceTree = "<group>"; };
+		FEF411C41E69AB4300AFB5E5 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		FEF411C51E69AB4300AFB5E5 /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		FEF411C71E69AB4300AFB5E5 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
+		FEF411C81E69AB4300AFB5E5 /* CoordsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordsBuilder.swift; sourceTree = "<group>"; };
+		FEF411C91E69AB4300AFB5E5 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEF411931E698FBE00AFB5E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FEF4118D1E698FBE00AFB5E5 = {
+			isa = PBXGroup;
+			children = (
+				FEF411991E698FBE00AFB5E5 /* NavitiaSDK */,
+				FEF411981E698FBE00AFB5E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEF411981E698FBE00AFB5E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411971E698FBE00AFB5E5 /* NavitiaSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEF411991E698FBE00AFB5E5 /* NavitiaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				FEF4119A1E698FBE00AFB5E5 /* NavitiaSDK.h */,
+				FEF411B91E69AB4300AFB5E5 /* Common */,
+				FEF411BC1E69AB4300AFB5E5 /* Models */,
+				FEF411C61E69AB4300AFB5E5 /* Resources */,
+				FEF4119B1E698FBE00AFB5E5 /* Info.plist */,
+			);
+			path = NavitiaSDK;
+			sourceTree = "<group>";
+		};
+		FEF411B91E69AB4300AFB5E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411BA1E69AB4300AFB5E5 /* ColorUtils.swift */,
+				FEF411BB1E69AB4300AFB5E5 /* DateUtils.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FEF411BC1E69AB4300AFB5E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411BD1E69AB4300AFB5E5 /* Classes */,
+				FEF411C31E69AB4300AFB5E5 /* Types */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FEF411BD1E69AB4300AFB5E5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411BE1E69AB4300AFB5E5 /* Address.swift */,
+				FEF411BF1E69AB4300AFB5E5 /* Coords.swift */,
+				FEF411C01E69AB4300AFB5E5 /* DisplayInformations.swift */,
+				FEF411C11E69AB4300AFB5E5 /* StopPoint.swift */,
+				FEF411C21E69AB4300AFB5E5 /* StopSchedule.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FEF411C31E69AB4300AFB5E5 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411C41E69AB4300AFB5E5 /* Coord.swift */,
+				FEF411C51E69AB4300AFB5E5 /* DateTime.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		FEF411C61E69AB4300AFB5E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEF411C71E69AB4300AFB5E5 /* BaseNavitiaResourceBuilder.swift */,
+				FEF411C81E69AB4300AFB5E5 /* CoordsBuilder.swift */,
+				FEF411C91E69AB4300AFB5E5 /* StopSchedulesBuilder.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FEF411941E698FBE00AFB5E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF4119C1E698FBE00AFB5E5 /* NavitiaSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FEF411961E698FBE00AFB5E5 /* NavitiaSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEF4119F1E698FBE00AFB5E5 /* Build configuration list for PBXNativeTarget "NavitiaSDK" */;
+			buildPhases = (
+				FEF411921E698FBE00AFB5E5 /* Sources */,
+				FEF411931E698FBE00AFB5E5 /* Frameworks */,
+				FEF411941E698FBE00AFB5E5 /* Headers */,
+				FEF411951E698FBE00AFB5E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NavitiaSDK;
+			productName = NavitiaSDK;
+			productReference = FEF411971E698FBE00AFB5E5 /* NavitiaSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEF4118E1E698FBE00AFB5E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Chakkra CHAK";
+				TargetAttributes = {
+					FEF411961E698FBE00AFB5E5 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AK7DPF549M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FEF411911E698FBE00AFB5E5 /* Build configuration list for PBXProject "NavitiaSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FEF4118D1E698FBE00AFB5E5;
+			productRefGroup = FEF411981E698FBE00AFB5E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEF411961E698FBE00AFB5E5 /* NavitiaSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEF411951E698FBE00AFB5E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEF411921E698FBE00AFB5E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF411D31E69AB4300AFB5E5 /* BaseNavitiaResourceBuilder.swift in Sources */,
+				FEF411CC1E69AB4300AFB5E5 /* Address.swift in Sources */,
+				FEF411D01E69AB4300AFB5E5 /* StopSchedule.swift in Sources */,
+				FEF411CD1E69AB4300AFB5E5 /* Coords.swift in Sources */,
+				FEF411D41E69AB4300AFB5E5 /* CoordsBuilder.swift in Sources */,
+				FEF411CF1E69AB4300AFB5E5 /* StopPoint.swift in Sources */,
+				FEF411D51E69AB4300AFB5E5 /* StopSchedulesBuilder.swift in Sources */,
+				FEF411CA1E69AB4300AFB5E5 /* ColorUtils.swift in Sources */,
+				FEF411D11E69AB4300AFB5E5 /* Coord.swift in Sources */,
+				FEF411CB1E69AB4300AFB5E5 /* DateUtils.swift in Sources */,
+				FEF411D21E69AB4300AFB5E5 /* DateTime.swift in Sources */,
+				FEF411CE1E69AB4300AFB5E5 /* DisplayInformations.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FEF4119D1E698FBE00AFB5E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FEF4119E1E698FBE00AFB5E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FEF411A01E698FBE00AFB5E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AK7DPF549M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NavitiaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.canaltp.labs.navitiasdk.NavitiaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FEF411A11E698FBE00AFB5E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AK7DPF549M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NavitiaSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fr.canaltp.labs.navitiasdk.NavitiaSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEF411911E698FBE00AFB5E5 /* Build configuration list for PBXProject "NavitiaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF4119D1E698FBE00AFB5E5 /* Debug */,
+				FEF4119E1E698FBE00AFB5E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEF4119F1E698FBE00AFB5E5 /* Build configuration list for PBXNativeTarget "NavitiaSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEF411A01E698FBE00AFB5E5 /* Debug */,
+				FEF411A11E698FBE00AFB5E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEF4118E1E698FBE00AFB5E5 /* Project object */;
+}

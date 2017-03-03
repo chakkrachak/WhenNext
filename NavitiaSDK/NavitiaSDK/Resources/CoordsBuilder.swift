@@ -5,20 +5,20 @@
 
 import Foundation
 
-class CoordsBuilder : BaseNavitiaResourceBuilder {
-    var coord:Coord? = nil
-    var coords:Coords? = nil
+public class CoordsBuilder : BaseNavitiaResourceBuilder {
+    public var coord:Coord? = nil
+    public var coords:Coords? = nil
 
-    override init(token:String, coverage: String) {
+    override public init(token:String, coverage: String) {
         super.init(token: token, coverage: coverage)
     }
 
-    func withCoord(_ coord: Coord) -> CoordsBuilder {
+    public func withCoord(_ coord: Coord) -> CoordsBuilder {
         self.coord = coord
         return self
     }
 
-    func build(callback: @escaping (Coords) -> (Void)) {
+    public func build(callback: @escaping (Coords) -> (Void)) {
         let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(self.coord!.lat);\(self.coord!.lon)"
         print(url)
         let requestURL: NSURL = NSURL(string: url)!

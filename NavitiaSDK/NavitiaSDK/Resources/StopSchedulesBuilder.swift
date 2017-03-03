@@ -5,13 +5,13 @@
 
 import Foundation
 
-class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
-    var coord:Coord?
-    var distance:Int?
-    var count:Int?
-    var stopSchedules:[StopSchedule]
+public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
+    public var coord:Coord?
+    public var distance:Int?
+    public var count:Int?
+    public var stopSchedules:[StopSchedule]
 
-    override init(token:String, coverage: String) {
+    override public init(token:String, coverage: String) {
         self.stopSchedules = []
         self.distance = 1000
         self.count = 20
@@ -19,22 +19,22 @@ class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
         super.init(token: token, coverage: coverage)
     }
 
-    func withCoords(_ coords: Coord) -> StopSchedulesBuilder {
+    public func withCoords(_ coords: Coord) -> StopSchedulesBuilder {
         self.coord = coords
         return self
     }
     
-    func withDistance(_ distance: Int) -> StopSchedulesBuilder {
+    public func withDistance(_ distance: Int) -> StopSchedulesBuilder {
         self.distance = distance
         return self
     }
 
-    func withCount(_ count: Int) -> StopSchedulesBuilder {
+    public func withCount(_ count: Int) -> StopSchedulesBuilder {
         self.count = count
         return self
     }
 
-    func build(callback: @escaping ([StopSchedule]) -> (Void)) {
+    public func build(callback: @escaping ([StopSchedule]) -> (Void)) {
         let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(self.coord!.lat);\(self.coord!.lon)/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
         print(url)
         let requestURL: NSURL = NSURL(string: url)!

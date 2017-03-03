@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import NavitiaSDK
 
 class StopPointViewCell: UITableViewCell {
     @IBOutlet weak var lineLabel: UILabel!

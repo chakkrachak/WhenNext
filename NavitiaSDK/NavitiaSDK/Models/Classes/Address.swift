@@ -5,8 +5,6 @@
 
 import Foundation
 
-struct StopPoint {
-    var name:String
-    var label:String
-    var coord:Coord
+public struct Address {
+    public var label:String
 }

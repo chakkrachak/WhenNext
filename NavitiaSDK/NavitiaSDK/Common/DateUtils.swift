@@ -6,7 +6,7 @@
 import Foundation
 
 extension TimeInterval {
-    func inFutureSmartDisplay() -> (length: String, unit: String) {
+    public func inFutureSmartDisplay() -> (length: String, unit: String) {
         var outputLength:String = "0"
         var outputUnit = "minute"
 

@@ -14,6 +14,6 @@ extension String {
     }
 }
 
-struct DateTime {
-    var dateTime:Date
+public struct DateTime {
+    public var dateTime:Date
 }

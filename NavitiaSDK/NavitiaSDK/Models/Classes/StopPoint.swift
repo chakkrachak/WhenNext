@@ -5,6 +5,8 @@
 
 import Foundation
 
-struct Coords {
-    var address:Address
+public struct StopPoint {
+    public var name:String
+    public var label:String
+    public var coord:Coord
 }
