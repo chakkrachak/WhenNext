@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-navitiasdk" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>NavitiaSDKCordovaPlugin</name>
+    <js-module name="NavitiaSDKCordovaPlugin" src="www/NavitiaSDKCordovaPlugin.js">
+        <clobbers target="cordova.plugins.NavitiaSDKCordovaPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="NavitiaSDKCordovaPlugin">
+                <param name="ios-package" value="NavitiaSDKCordovaPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/NavitiaSDK/NavitiaSDK.h"/>
+        <header-file src="src/ios/NavitiaSDK-Bridging-Header.h"/>
+
+        <source-file src="src/ios/NavitiaSDKCordovaPlugin.swift" />
+        <source-file src="src/ios/NavitiaSDK/Common/ColorUtils.swift" />
+        <source-file src="src/ios/NavitiaSDK/Common/DateUtils.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Classes/Address.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Classes/Coords.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Classes/DisplayInformations.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Classes/StopPoint.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Classes/StopSchedule.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Types/Coord.swift" />
+        <source-file src="src/ios/NavitiaSDK/Models/Types/DateTime.swift" />
+        <source-file src="src/ios/NavitiaSDK/Resources/BaseNavitiaResourceBuilder.swift" />
+        <source-file src="src/ios/NavitiaSDK/Resources/CoordsBuilder.swift" />
+        <source-file src="src/ios/NavitiaSDK/Resources/StopSchedulesBuilder.swift" />
+
+        <dependency id="cordova-plugin-add-swift-support" />
+    </platform>
+</plugin>

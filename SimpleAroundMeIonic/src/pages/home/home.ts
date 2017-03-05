@@ -35,10 +35,11 @@ export class HomePage {
 
     testDesEnfers() {
         var that = this;
-        cordova.plugins.HelloPluginCordovaSwift.giveMeAnArray("PoulpinePilou",
-            function (arrayResponse) {
+        cordova.plugins.NavitiaSDKCordovaPlugin.coolMethod("PoulpinePilou",
+            function (msg) {
                 that.zone.run(function () {
-                        that.items = arrayResponse;
+                        that.items = [];
+                        that.items.push(msg);
                     }
                 )
             },
