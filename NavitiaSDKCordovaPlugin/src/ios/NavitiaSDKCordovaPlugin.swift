@@ -1,5 +1,5 @@
 @objc(NavitiaSDKCordovaPlugin) class NavitiaSDKCordovaPlugin : CDVPlugin {
-    @objc(coolMethod:)
+        @objc(coolMethod:)
     func coolMethod(command: CDVInvokedUrlCommand) {
     var pluginResult = CDVPluginResult(
       status: CDVCommandStatus_ERROR
@@ -40,39 +40,33 @@
     )
     }
 
-    @objc(giveMeAnArray:)
-    func giveMeAnArray(command: CDVInvokedUrlCommand) {
-      var pluginResult = CDVPluginResult(
-        status: CDVCommandStatus_ERROR
-      )
+    let token:String = "9e304161-bb97-4210-b13d-c71eaf58961c"
+    let coverage:String = "fr-idf"
 
-      pluginResult = CDVPluginResult(
-          status: CDVCommandStatus_OK,
-          messageAs: ["TATA", "TOTO"]
-      )
+    @objc(StopSchedulesBuilderWrapper:)
+    func StopSchedulesBuilderWrapper(command: CDVInvokedUrlCommand) {
+      self.commandDelegate!.run(inBackground: {
+            var pluginResult = CDVPluginResult(
+              status: CDVCommandStatus_ERROR
+            )
 
-      self.commandDelegate!.send(
-        pluginResult,
-        callbackId: command.callbackId
-      )
+          pluginResult?.setKeepCallbackAs(true)
+
+          StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
+              .withCoords(Coord(lat: "48.847002", lon: "2.37731"))
+              .withDistance(1000)
+              .withCount(30)
+              .build(callback: {
+                  (stopSchedules:[StopSchedule]) -> Void in
+                  pluginResult = CDVPluginResult(
+                    status: CDVCommandStatus_OK,
+                    messageAs: stopSchedules
+                  )
+                  self.commandDelegate!.send(
+                    pluginResult,
+                    callbackId: command.callbackId
+                  )
+              })
+      })
     }
-
-    @objc(totoSwift:)
-        func totoSwift(command: CDVInvokedUrlCommand) {
-          var pluginResult = CDVPluginResult(
-            status: CDVCommandStatus_ERROR
-          )
-
-          var coordsBuilder:CoordsBuilder = CoordsBuilder(token: "", coverage: "")
-
-          pluginResult = CDVPluginResult(
-              status: CDVCommandStatus_OK,
-              messageAs: ["TATA", "TOTO"]
-          )
-
-          self.commandDelegate!.send(
-            pluginResult,
-            callbackId: command.callbackId
-          )
-        }
 }

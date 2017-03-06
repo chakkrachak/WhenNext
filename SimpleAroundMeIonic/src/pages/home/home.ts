@@ -35,11 +35,11 @@ export class HomePage {
 
     testDesEnfers() {
         var that = this;
-        cordova.plugins.NavitiaSDKCordovaPlugin.coolMethod("PoulpinePilou",
-            function (msg) {
+        cordova.plugins.NavitiaSDKCordovaPlugin.StopSchedulesBuilder(function (stopSchedules) {
+                alert(JSON.stringify(stopSchedules));
                 that.zone.run(function () {
                         that.items = [];
-                        that.items.push(msg);
+                        that.items.push("DONE");
                     }
                 )
             },
