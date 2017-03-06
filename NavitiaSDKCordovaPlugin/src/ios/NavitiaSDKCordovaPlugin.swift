@@ -53,14 +53,14 @@
           pluginResult?.setKeepCallbackAs(true)
 
           StopSchedulesBuilder(token: "9e304161-bb97-4210-b13d-c71eaf58961c", coverage: "fr-idf")
-              .withCoords(Coord(lat: "48.847002", lon: "2.37731"))
+              .withCoords(Coord(lat: "2.37731", lon: "48.847002"))
               .withDistance(1000)
               .withCount(30)
               .build(callback: {
                   (stopSchedules:[StopSchedule]) -> Void in
                   pluginResult = CDVPluginResult(
                     status: CDVCommandStatus_OK,
-                    messageAs: stopSchedules
+                    messageAs: [stopSchedules[0].stopPoint.label]
                   )
                   self.commandDelegate!.send(
                     pluginResult,
